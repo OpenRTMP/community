@@ -1,0 +1,84 @@
+name: Bug report
+description: Report a reproducible problem in an OpenRTMP component.
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. This is the central issue tracker for all OpenRTMP projects.
+
+        Do not include API tokens, stream keys, passwords, private keys, private hostnames, or other sensitive data.
+  - type: dropdown
+    id: component
+    attributes:
+      label: Affected component
+      description: Choose the closest component. If you are unsure, select Other / not sure.
+      options:
+        - librtmp2
+        - librtmp2-server
+        - librtmp2-server-panel
+        - packages
+        - openrtmp.org / documentation
+        - organization / community
+        - Other / not sure
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      description: Release/tag, Docker image tag, package version, or commit SHA when known.
+      placeholder: e.g. v0.8.0, latest, or commit SHA
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, architecture, deployment method, and relevant client/player versions.
+      placeholder: e.g. Debian 13 amd64, Docker, OBS 32.x
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe the actual behavior and when it occurs.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Provide the smallest reproducible publisher → server → player or UI/package workflow.
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What did you expect to happen instead?
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Sanitized logs or evidence
+      description: Add relevant logs, screenshots, configuration excerpts, or error output with secrets removed.
+      render: shell
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      description: Include codecs, RTMP/RTMPS details, clustering state, regressions, or related links when relevant.
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I searched existing OpenRTMP community issues for duplicates.
+          required: true
+        - label: I tested a current supported release or the current default branch when practical.
+          required: true
+        - label: I removed credentials, stream keys, private keys, private hosts, and personal data.
+          required: true
