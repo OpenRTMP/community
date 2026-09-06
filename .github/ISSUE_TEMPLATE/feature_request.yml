@@ -1,0 +1,63 @@
+name: Feature request
+description: Propose an actionable improvement for an OpenRTMP component.
+title: "[Feature]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for concrete feature requests that can be tracked to completion. For early ideas or architecture exploration, start a Discussion instead.
+  - type: dropdown
+    id: component
+    attributes:
+      label: Affected component
+      description: Choose the closest component. If the proposal spans repositories, select Cross-project / other.
+      options:
+        - librtmp2
+        - librtmp2-server
+        - librtmp2-server-panel
+        - packages
+        - openrtmp.org / documentation
+        - organization / community
+        - Cross-project / other
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+      description: Describe the user or developer problem, not only the desired implementation.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Describe the behavior or capability you would like OpenRTMP to provide.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Describe workarounds, adjacent tools, or alternative designs you considered.
+  - type: textarea
+    id: compatibility
+    attributes:
+      label: Compatibility and interoperability impact
+      description: Note public APIs, configuration, database, package, Docker, protocol, OBS/FFmpeg/player, or migration impact when relevant.
+  - type: textarea
+    id: completion
+    attributes:
+      label: Testable completion criteria
+      description: What observable result would make this request complete?
+    validations:
+      required: true
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I searched existing OpenRTMP community issues and discussions for similar requests.
+          required: true
+        - label: This is an actionable request; otherwise I will use Discussions.
+          required: true
