@@ -1,0 +1,81 @@
+name: Interoperability report
+description: Report a compatibility problem between OpenRTMP and a publisher, player, proxy, or related tool.
+title: "[Interop]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for reproducible interoperability problems involving OBS, FFmpeg, players, RTMP/RTMPS, Enhanced RTMP, codecs, proxies, or related integrations.
+  - type: dropdown
+    id: component
+    attributes:
+      label: Closest OpenRTMP component
+      options:
+        - librtmp2
+        - librtmp2-server
+        - librtmp2-server-panel
+        - packages / deployment
+        - Other / not sure
+    validations:
+      required: true
+  - type: input
+    id: openrtmp-version
+    attributes:
+      label: OpenRTMP version or commit
+      placeholder: Release/tag, Docker image tag, package version, or commit SHA
+    validations:
+      required: true
+  - type: textarea
+    id: peers
+    attributes:
+      label: Other software and versions
+      description: List publisher, player, proxy, monitoring tool, browser, or integration versions involved.
+      placeholder: |
+        Publisher: OBS ...
+        Player: FFmpeg ...
+        Proxy/load balancer: ...
+    validations:
+      required: true
+  - type: textarea
+    id: media
+    attributes:
+      label: Transport and media details
+      description: Include RTMP/RTMPS, codecs, Enhanced RTMP features, resolution/frame rate, and relevant output settings.
+    validations:
+      required: true
+  - type: textarea
+    id: path
+    attributes:
+      label: Complete test path
+      description: Describe the complete publisher → OpenRTMP component(s) → player/integration path.
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Actual behavior
+      description: Describe the failure, including when it starts and whether reconnect or late join changes it.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Sanitized logs or evidence
+      description: Include minimal logs, commands, packet-level observations, screenshots, or configuration with all secrets removed.
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I reproduced this with the smallest practical setup.
+          required: true
+        - label: I searched existing OpenRTMP community issues for the same compatibility problem.
+          required: true
+        - label: I removed credentials, stream keys, private keys, private hosts, and personal data.
+          required: true
