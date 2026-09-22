@@ -9,9 +9,17 @@ Use this repository for bug reports, feature requests, interoperability reports,
 - [Report a bug or request a feature](https://github.com/OpenRTMP/community/issues/new/choose)
 - [Browse existing issues](https://github.com/OpenRTMP/community/issues)
 - [Ask a question or start a discussion](https://github.com/OpenRTMP/community/discussions)
+- [Add your project to the showcase](https://github.com/OpenRTMP/community/issues/new?template=showcase_submission.yml)
 - [OpenRTMP documentation](https://openrtmp.org/docs/)
 - [Contributing guide](https://github.com/OpenRTMP/.github/blob/main/CONTRIBUTING.md)
 - [Security policy](https://github.com/OpenRTMP/.github/blob/main/SECURITY.md)
+
+## Showcase
+
+Running OpenRTMP in a real deployment, embedding `librtmp2` in your own application, or built an integration on top of it? Add it to the [OpenRTMP showcase](https://openrtmp.org/showcase/):
+
+- [Submit through the showcase issue form](https://github.com/OpenRTMP/community/issues/new?template=showcase_submission.yml), or
+- Open a pull request directly against [`showcase/index.php`](https://github.com/OpenRTMP/openrtmp.org/blob/main/showcase/index.php) in the `openrtmp.org` repository.
 
 ## Which component is affected?
 

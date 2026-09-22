@@ -1,0 +1,57 @@
+name: Showcase submission
+description: Add your project, deployment, or integration to the OpenRTMP showcase.
+title: "[Showcase]: "
+labels:
+  - showcase
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for using OpenRTMP. This adds your project to the [showcase page](https://openrtmp.org/showcase/) at openrtmp.org.
+
+        Keep it factual: what you actually built or run, not marketing copy. Do not include API tokens, stream keys, private hostnames, or other sensitive data.
+
+        Prefer opening the pull request yourself? Add an entry directly to [`showcase/index.php`](https://github.com/OpenRTMP/openrtmp.org/blob/main/showcase/index.php) in the `openrtmp.org` repository instead of filing this issue.
+  - type: input
+    id: name
+    attributes:
+      label: Project name
+      description: The name to display on the showcase.
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Project URL
+      description: A link to the project, repository, or deployment.
+      placeholder: https://example.com
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Deployment
+        - Integration
+        - Library or plugin built on librtmp2
+        - Community project
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: One or two sentences on what it is and how it uses OpenRTMP. This is used close to verbatim on the showcase page.
+      placeholder: "e.g. A self-hosted streaming backend for our Discord community, running librtmp2-server behind RTMPS with 40 stream keys."
+    validations:
+      required: true
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: This project genuinely uses OpenRTMP (`librtmp2`, `librtmp2-server`, or `librtmp2-server-panel`), and I am authorized to submit it.
+          required: true
+        - label: I am fine with this name, URL, and description being published on openrtmp.org.
+          required: true
