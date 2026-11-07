@@ -11,7 +11,7 @@ body:
 
         Keep it factual: what you actually built or run, not marketing copy. Do not include API tokens, stream keys, private hostnames, or other sensitive data.
 
-        Prefer opening the pull request yourself? Add an entry directly to [`showcase/index.php`](https://github.com/OpenRTMP/openrtmp.org/blob/main/showcase/index.php) in the `openrtmp.org` repository instead of filing this issue.
+        Prefer opening the pull request yourself? Add an entry directly to [`includes/showcase-entries.php`](https://github.com/OpenRTMP/openrtmp.org/blob/main/includes/showcase-entries.php) in the `openrtmp.org` repository instead of filing this issue. That list is shared by the English and German showcase pages. Do not edit `showcase/index.php`: its array is the curated, tested interoperability section.
   - type: input
     id: name
     attributes:

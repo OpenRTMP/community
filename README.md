@@ -19,7 +19,7 @@ Use this repository for bug reports, feature requests, interoperability reports,
 Running OpenRTMP in a real deployment, embedding `librtmp2` in your own application, or built an integration on top of it? Add it to the [OpenRTMP showcase](https://openrtmp.org/showcase/):
 
 - [Submit through the showcase issue form](https://github.com/OpenRTMP/community/issues/new?template=showcase_submission.yml), or
-- Open a pull request directly against [`showcase/index.php`](https://github.com/OpenRTMP/openrtmp.org/blob/main/showcase/index.php) in the `openrtmp.org` repository.
+- Open a pull request directly against [`includes/showcase-entries.php`](https://github.com/OpenRTMP/openrtmp.org/blob/main/includes/showcase-entries.php) in the `openrtmp.org` repository. The list is shared by the English and German pages; `showcase/index.php` holds the curated interoperability section instead.
 
 ## Which component is affected?
 
